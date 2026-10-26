@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Record Attendance | AttendTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">A</span> AttendTrack
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Dashboard</a>
+      <a href="records.html">Attendance Records</a>
+      <a href="record-attendance.html" aria-current="page">Record Attendance</a>
+      <a href="calculator.html">Calculator</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <p class="eyebrow">SESSION MANAGEMENT</p>
+      <h1>Record Attendance</h1>
+      <p class="muted">
+        Choose a course first, then select a student enrolled in that course.
+      </p>
+
+      <div class="panel form-panel">
+        <form id="attendance-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="session-course">Course</label>
+              <select id="session-course" name="course"
+                data-course-options required>
+                <option value="">Select a course</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="student-select">Enrolled student</label>
+              <select id="student-select" name="studentId"
+                required disabled>
+                <option value="">Select a course first</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="session-date">Session date</label>
+              <input type="date" id="session-date"
+                name="sessionDate" required>
+            </div>
+
+            <div class="form-group">
+              <label for="attendance-status">Attendance status</label>
+              <select id="attendance-status" name="status" required>
+                <option value="">Select a status</option>
+                <option value="Present">Present</option>
+                <option value="Late">Late</option>
+                <option value="Absent">Absent</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="participation">Participation rating</label>
+              <select id="participation" name="participation" required>
+                <option value="">Select participation level</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="button button-primary">
+            Save attendance record
+          </button>
+
+          <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h2>Recording instructions</h2>
+        <p>1. Select one of the four courses.</p>
+        <p>2. Choose a student enrolled in that course.</p>
+        <p>3. Enter the session date and attendance status.</p>
+        <p>4. Select a participation rating and save.</p>
+        <p class="muted">
+          Present and Late count as attended. Absent increases the total
+          sessions without increasing sessions attended.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AttendTrack — Group 9</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendance Records | AttendTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">A</span> AttendTrack
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Dashboard</a>
+      <a href="records.html" aria-current="page">Attendance Records</a>
+      <a href="record-attendance.html">Record Attendance</a>
+      <a href="calculator.html">Calculator</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <p class="eyebrow">STUDENT MANAGEMENT</p>
+      <h1>Attendance Records</h1>
+      <p class="muted">
+        Browse all 40 student-course enrolments. Search and filter the records.
+      </p>
+
+      <div class="panel">
+        <div class="filters">
+          <div class="form-group search-field">
+            <label for="search-input">Search students or courses</label>
+            <input type="search" id="search-input"
+              placeholder="Enter name, student ID or course">
+          </div>
+
+          <div class="form-group">
+            <label for="course-filter">Course</label>
+            <select id="course-filter" data-course-options>
+              <option value="">All courses</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="status-filter">Last attendance status</label>
+            <select id="status-filter">
+              <option value="">All statuses</option>
+              <option value="Present">Present</option>
+              <option value="Late">Late</option>
+              <option value="Absent">Absent</option>
+            </select>
+          </div>
+        </div>
+
+        <p id="records-count" class="muted" aria-live="polite"></p>
+
+        <div class="table-wrapper">
+          <table>
+            <caption class="sr-only">Attendance by student and course</caption>
+            <thead>
+              <tr>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student name</th>
+                <th scope="col">Course</th>
+                <th scope="col">Attended / Total</th>
+                <th scope="col">Percentage</th>
+                <th scope="col">Last status</th>
+                <th scope="col">Eligibility</th>
+              </tr>
+            </thead>
+            <tbody id="attendance-table-body">
+              <tr><td colspan="7">Loading records...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p id="records-message" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AttendTrack — Group 9</p>
+  </footer>
+</body>
+</html>

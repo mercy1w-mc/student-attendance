@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Group 9 student attendance dashboard">
+  <title>Dashboard | AttendTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">A</span> AttendTrack
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Dashboard</a>
+      <a href="records.html">Attendance Records</a>
+      <a href="record-attendance.html">Record Attendance</a>
+      <a href="calculator.html">Calculator</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="dashboard-summary" class="page-section">
+      <p class="eyebrow">GROUP 9 · ACADEMIC MANAGEMENT</p>
+      <h1>Student Attendance Dashboard</h1>
+      <p class="muted">
+        Monitor student enrolments, attendance, participation and eligibility.
+      </p>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <p>Total students</p>
+          <h2 id="total-students">0</h2>
+          <span>Registered sample students</span>
+        </article>
+
+        <article class="stat-card">
+          <p>Course enrolments</p>
+          <h2 id="total-enrolments">0</h2>
+          <span>Student-course registrations</span>
+        </article>
+
+        <article class="stat-card">
+          <p>Average attendance</p>
+          <h2 id="average-attendance">0%</h2>
+          <span>Across all enrolments</span>
+        </article>
+
+        <article class="stat-card">
+          <p>Eligible enrolments</p>
+          <h2 id="eligible-students">0</h2>
+          <span>Meeting the required percentage</span>
+        </article>
+
+        <article class="stat-card">
+          <p>Below requirement</p>
+          <h2 id="below-requirement">0</h2>
+          <span>Needing attendance improvement</span>
+        </article>
+      </div>
+
+      <div class="panel">
+        <div class="section-heading">
+          <div>
+            <h2>Attendance overview</h2>
+            <p class="muted">Your current sample-data summary.</p>
+          </div>
+          <a href="records.html">View records →</a>
+        </div>
+        <p>Minimum attendance requirement: <strong>75%</strong> by default.</p>
+        <p>Each student is enrolled in all four courses.</p>
+        <a class="button button-primary" href="record-attendance.html">
+          + Record attendance
+        </a>
+        <a class="button button-primary" href="calculator.html">
+          Open calculator
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AttendTrack — Group 9</p>
+    
+  </footer>
+</body>
+</html>

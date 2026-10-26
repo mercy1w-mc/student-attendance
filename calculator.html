@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attendance Calculator | AttendTrack</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon">A</span> AttendTrack
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Dashboard</a>
+      <a href="records.html">Attendance Records</a>
+      <a href="record-attendance.html">Record Attendance</a>
+      <a href="calculator.html" aria-current="page">Calculator</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-section">
+      <p class="eyebrow">ACADEMIC ELIGIBILITY</p>
+      <h1>Attendance Calculator</h1>
+      <p class="muted">
+        Calculate eligibility separately for every student's course enrolment.
+      </p>
+
+      <div class="panel">
+        <div class="calculator-controls">
+          <div class="form-group">
+            <label for="requirement-input">
+              Minimum attendance requirement (%)
+            </label>
+            <input type="number" id="requirement-input"
+              min="1" max="100" step="1" value="75" required>
+          </div>
+
+          <button type="button" id="calculate-button"
+            class="button button-primary">
+            Calculate eligibility
+          </button>
+        </div>
+
+        <div id="calculator-result" role="status" aria-live="polite">
+          Set the required attendance percentage and calculate eligibility.
+        </div>
+
+        <p class="muted">
+          Formula: (sessions attended ÷ total sessions) × 100.
+          A student meets the requirement when their percentage is equal
+          to or greater than the selected threshold.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>How eligibility works</h2>
+        <p><strong>Example:</strong> 8 sessions attended out of 10 sessions.</p>
+        <p>Attendance = (8 ÷ 10) × 100 = 80%.</p>
+        <p>If the requirement is 75%, the student meets the requirement.</p>
+        <p>If the requirement is 85%, the student is below the requirement.</p>
+        <a class="button button-primary" href="records.html">
+          View individual results
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>AttendTrack — Group 9</p>
+  </footer>
+</body>
+</html>
